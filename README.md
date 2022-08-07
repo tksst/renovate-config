@@ -1,0 +1,8 @@
+# renovate-config
+
+```json
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>tksst/renovate-config"]
+}
+```
