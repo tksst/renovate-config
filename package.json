@@ -1,10 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "check:renovate-default": "renovate-config-validator default.json",
-    "check:renovate-renovate": "renovate-config-validator renovate.json",
-    "check:prettier": "prettier --check .",
-    "check": "run-p --continue-on-error --aggregate-output check:*",
+    "lint:renovate-default": "renovate-config-validator default.json",
+    "lint:renovate-renovate": "renovate-config-validator renovate.json",
+    "lint:prettier": "prettier --check .",
+    "lint": "run-p --continue-on-error --aggregate-output lint:*",
     "fix": "prettier --write ."
   },
   "devDependencies": {
