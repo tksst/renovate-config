@@ -40,9 +40,7 @@
       "pinDigests": true
     }
   ],
-  // lock file の更新もやりたいが、頻度はほどほどにしたい
   "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": ["before 4am on the first day of the month"]
+    "enabled": true
   }
 }
