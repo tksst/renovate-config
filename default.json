@@ -2,6 +2,10 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base",
+    // ブランチのステータスが確定してからPRを作成する
+    ":prNotPending",
+    // デフォルトでレートリミットが設定されているので無効にする
+    ":disableRateLimiting",
     // Pull Request に、dependabotと同じく"dependencies"というラベルを付ける
     ":label(dependencies)",
     ":timezone(Asia/Tokyo)"
