@@ -10,7 +10,7 @@
   "devDependencies": {
     "npm-run-all": "4.1.5",
     "prettier": "2.8.8",
-    "renovate": "35.82.0"
+    "renovate": "35.116.3"
   },
   "packageManager": "pnpm@8.6.1"
 }
