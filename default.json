@@ -42,6 +42,12 @@
       "matchManagers": ["github-actions"],
       // convert tag to commit hash
       "pinDigests": true
+    },
+    {
+      // Dockerfileについてはまとめない(そんなに大量にあるわけではないので)
+      "matchManagers": ["dockerfile"],
+      // convert tag to gigest
+      "pinDigests": true
     }
   ],
   "lockFileMaintenance": {
