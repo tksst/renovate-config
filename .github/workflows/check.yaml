@@ -1,20 +1,22 @@
 name: Config check
 
 on:
-  workflow_call:
   workflow_dispatch:
   pull_request:
   push:
-    # branches:
-    # branches-ignore:
-    #  - master
-    #  - alpha
 
 jobs:
   check:
-    name: Config check
-    uses: tksst/github-actions-workflows/.github/workflows/nodejs-pnpm.yml@f49ab363c3ce9708e9d067dc81d2c253b9c6ac31
-    with:
-      build: false
-      test: false
-      os: '["ubuntu-latest"]'
+    name: Check
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check whether it can skip
+        id: check-skippable
+        uses: fkirc/skip-duplicate-actions@12aca0a884f6137d619d6a8a09fcc3406ced5281 # v5.3.0
+
+      - name: set up the project
+        if: steps.check-skippable.outputs.should_skip != 'true'
+        uses: tksst/github-actions-workflows/actions/setup-pnpm-project@118c76c1845aa9c8974dd0664742f4c46ed25304
+
+      - if: steps.check-skippable.outputs.should_skip != 'true'
+        run: pnpm lint
