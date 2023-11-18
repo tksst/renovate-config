@@ -1,6 +1,6 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
     "config:best-practices",
     // ブランチのステータスが確定してからPRを作成する
     ":prNotPending",
@@ -8,45 +8,45 @@
     ":disableRateLimiting",
     // Pull Request に、dependabotと同じく"dependencies"というラベルを付ける
     ":label(dependencies)",
-    ":timezone(Asia/Tokyo)"
+    ":timezone(Asia/Tokyo)",
   ],
   // メジャーバージョンアップはまとめない
-  "separateMultipleMajor": true,
-  "packageRules": [
+  separateMultipleMajor: true,
+  packageRules: [
     {
       // Node.js のメジャーバージョンは renovate 外で実施する
-      "matchManagers": ["nvm", "nodenv"],
-      "major": { "enabled": false }
+      matchManagers: ["nvm", "nodenv"],
+      major: { enabled: false },
     },
     {
       // @types/node のメジャーバージョンは Node.js の最低バージョンに合わせる必要があるので、メジャーバージョンの更新をしない
-      "matchManagers": ["npm"],
-      "matchPackageNames": ["@types/node"],
-      "major": { "enabled": false }
+      matchManagers: ["npm"],
+      matchPackageNames: ["@types/node"],
+      major: { enabled: false },
     },
     {
       // npm の dependencies でまとめる
-      "groupName": "npm dependencies",
-      "matchManagers": ["npm"],
-      "matchDepTypes": ["dependencies"]
+      groupName: "npm dependencies",
+      matchManagers: ["npm"],
+      matchDepTypes: ["dependencies"],
     },
     {
       // npm の devDependencies でまとめる
-      "groupName": "npm devDependencies",
-      "matchManagers": ["npm"],
-      "matchDepTypes": ["devDependencies"]
+      groupName: "npm devDependencies",
+      matchManagers: ["npm"],
+      matchDepTypes: ["devDependencies"],
     },
     {
       // GitHub Actions の更新をまとめる
-      "groupName": "GitHub Actions",
-      "matchManagers": ["github-actions"]
+      groupName: "GitHub Actions",
+      matchManagers: ["github-actions"],
     },
     {
       // Dockerfileについてはまとめない(そんなに大量にあるわけではないので)
-      "matchManagers": ["dockerfile"]
-    }
+      matchManagers: ["dockerfile"],
+    },
   ],
-  "lockFileMaintenance": {
-    "enabled": true
-  }
+  lockFileMaintenance: {
+    enabled: true,
+  },
 }
