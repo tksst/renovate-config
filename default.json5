@@ -42,8 +42,12 @@
       matchManagers: ["github-actions"],
     },
     {
-      // Dockerfileについてはまとめない(そんなに大量にあるわけではないので)
+      // Disable Dockerfile syntax statement support
+      // https://github.com/renovatebot/renovate/issues/22804
       matchManagers: ["dockerfile"],
+      matchPackageNames: ["docker/dockerfile"],
+      matchDepTypes: ["syntax"],
+      enabled: false,
     },
   ],
   lockFileMaintenance: {
