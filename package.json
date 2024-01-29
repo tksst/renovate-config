@@ -13,5 +13,5 @@
     "prettier": "3.2.5",
     "renovate": "37.173.1"
   },
-  "packageManager": "pnpm@8.10.5"
+  "packageManager": "pnpm@8.15.1"
 }
