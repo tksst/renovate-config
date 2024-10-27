@@ -11,7 +11,7 @@
   "devDependencies": {
     "npm-run-all2": "7.0.1",
     "prettier": "3.3.3",
-    "renovate": "38.101.0"
+    "renovate": "38.132.2"
   },
   "packageManager": "pnpm@9.12.2"
 }
