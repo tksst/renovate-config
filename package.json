@@ -9,7 +9,7 @@
     "fix": "prettier --write ."
   },
   "devDependencies": {
-    "npm-run-all2": "7.0.2",
+    "npm-run-all2": "8.0.1",
     "prettier": "3.4.2",
     "renovate": "39.163.0"
   },
