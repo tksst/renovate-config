@@ -9,9 +9,9 @@
     "fix": "prettier --write ."
   },
   "devDependencies": {
-    "npm-run-all2": "8.0.2",
+    "npm-run-all2": "8.0.3",
     "prettier": "3.5.3",
-    "renovate": "40.18.1"
+    "renovate": "40.29.1"
   },
   "packageManager": "pnpm@9.12.2"
 }
