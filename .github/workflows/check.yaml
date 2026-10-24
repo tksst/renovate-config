@@ -22,7 +22,7 @@ jobs:
           # Set to true to publish the results as comment to the PR (applicable if workflow run is triggered by PR).
           comment_on_pr: false
 
-      - uses: Kesin11/actions-timeline@427ee2cf860166e404d0d69b4f2b24012bb7af4f # v2.2.3
+      - uses: Kesin11/actions-timeline@460b1f8a750077029ad3589824d371b200e91dcf # v3.2.1
         if: steps.check-skippable.outputs.should_skip != 'true'
 
       - name: Checkout the source
